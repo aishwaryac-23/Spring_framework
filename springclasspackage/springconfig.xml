@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" 
+     xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="s1" class="springclasspackage.Book">
+	<property name="book_id" value="book_1"></property>
+	<property name="book_name" value="The Complete reference of Java"></property>
+	<property name="author" value="Herbert Schildt"></property>
+	</bean>
+	
+<bean id="s2" class="springclasspackage.Library">
+	<property name="lib_id" value="lib-1"></property>
+	<property name="lib_name" value="NCT library"></property>
+	<property name="b" ref="s1"></property>
+</bean>
+
+<bean id="s3" class="springclasspackage.QuestionAndAnswer">
+	<property name="qid" value="q-1"></property>
+	<property name="qname" value="Expand WWW"></property>
+	<property name="ans">
+		<list>
+			<value>World Wide Web</value>
+			<value>Wide Web World</value>
+			<value>World Web Wide</value>
+			<value>Web Wide World</value>
+	</list>
+</property>
+</bean>
+</beans>
